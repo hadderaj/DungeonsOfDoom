@@ -10,7 +10,5 @@ namespace DungeonsOfDoom
     {
         public Monster Monster { get; set; }
         public Item Item { get; set; }
-        public Weapon Weapon { get;  set; }
-        public Potion Potion { get;  set; }
     }
 }

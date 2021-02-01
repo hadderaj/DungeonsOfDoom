@@ -9,11 +9,19 @@ namespace DungeonsOfDoom
         public int Health { get; set; }
         public int Dmg { get; set; }
 
-        public Character(int health, int dmg)
+        public Character(int health, int baseDmg)
         {
             Health = health;
-            Dmg = dmg;
+            Dmg = baseDmg;
         }
+        public virtual void Attack(Character victim)
+        {
+            victim.Health -= Dmg;
+        }
+
+
+
+
 
     }
 }

@@ -14,5 +14,8 @@ namespace DungeonsOfDoom
         }
 
         public string Name { get; set; }
+
+
+        //Skapa methoder abstraka/virituella
     }
 }

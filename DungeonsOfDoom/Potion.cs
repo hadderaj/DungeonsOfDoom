@@ -6,7 +6,7 @@ namespace DungeonsOfDoom
 {
     class Potion : Item
     {
-        public Potion(string name, int healthMod) : base(name)
+        public Potion(string name, int healthMod) : base(name) // ska in med health ++
         {
             HealthMod = healthMod;
         }
