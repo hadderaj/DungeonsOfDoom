@@ -8,7 +8,9 @@ namespace DungeonsOfDoom
 {
     class Monster:Character
     {
-        public Monster(int health): base(health, 10)
+        // Skapa subklasser till monster
+
+        public Monster(int health): base(health, 10) // 10 är placeholder
         {
            
         }

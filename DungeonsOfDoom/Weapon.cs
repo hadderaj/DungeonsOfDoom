@@ -6,7 +6,7 @@ namespace DungeonsOfDoom
 {
     class Weapon : Item
     {
-        public Weapon(string name, int dmgMod) : base(name)
+        public Weapon(string name, int dmgMod) : base(name) // Skapa subklasser till vapen
         {
             DmgMod = dmgMod;
         }
