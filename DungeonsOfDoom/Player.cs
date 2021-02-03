@@ -14,11 +14,23 @@ namespace DungeonsOfDoom
             Y = y;
         }
 
+        public override int Attack(Character target)
+        {
+            int Dmg = RandomUtils.PlayerAttack(this);
 
+            return Dmg;
+        }
         public int X { get; set; }
         public int Y { get; set; }
 
         public List<Item> backpack = new List<Item>();
+
+
+        //public void UseItem(Item item)
+        //{
+        //    Health += item.HealthMod;
+        //    Dmg += item.DmgMod;
+        //}
     }
 
 }

@@ -12,13 +12,18 @@ namespace DungeonsOfDoom
 
         }
 
-        public override void Attack(Character victim)
+        public override int Attack(Character target)
         {
-            if (Health <5)
+            if (Health < 5)
             {
-                victim.Health = Dmg *2;
-            } else base.Attack(victim);
-            
+                target.Health -= Dmg * 2;
+                return (Dmg * 2);
+            }
+            else
+            {
+                base.Attack(target);
+                return Dmg;
+            }
         }
     }
 }

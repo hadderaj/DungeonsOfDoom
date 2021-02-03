@@ -8,12 +8,27 @@ namespace DungeonsOfDoom
 {
     abstract class Item
     {
-        public Item(string name)
+        public int HealthMod { get; set; }
+        public int DmgMod { get; set; }
+        public string Name { get; set; }
+        public string ItemModifier { get; set; }
+
+
+        public Item(string name, int healthMod, int dmgMod)
         {
             Name = name;
+            HealthMod = healthMod;
+            DmgMod = dmgMod;
         }
 
-        public string Name { get; set; }
+
+        public virtual void ItemEffect(Player player)
+        {
+            player.Health += HealthMod;
+            player.Dmg += DmgMod;
+        }
+
+
 
 
         //Skapa methoder abstraka/virituella

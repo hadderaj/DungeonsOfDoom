@@ -7,6 +7,17 @@ namespace DungeonsOfDoom
     abstract class Character
     {
         public int Health { get; set; }
+        //{
+        //    get  {};
+        //    set
+        //    {
+        //        if (value < 0)
+        //            Health = 0;
+        //        else
+        //            Health = value;
+        //    }
+
+        //}
         public int Dmg { get; set; }
 
         public Character(int health, int baseDmg)
@@ -14,9 +25,11 @@ namespace DungeonsOfDoom
             Health = health;
             Dmg = baseDmg;
         }
-        public virtual void Attack(Character victim)
+        public virtual int Attack(Character target)
         {
-            victim.Health -= Dmg;
+            target.Health -= Dmg;
+            return Dmg;
+
         }
 
 
